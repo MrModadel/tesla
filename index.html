@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="css/style.min.css">
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+   <div class="wrapper">
+      <header class="header-img">
+         <div class="container">
+
+            <div class="header-img__img">
+               <div class="header-img__click">
+               </div>
+            </div>
+         </div>
+      </header>
+      <main class="page">
+         <section class="indecators">
+            <div class="container">
+               <div class="indecators__container">
+                  <div class="indecators__item in-item">
+                     <div class="in-item__text text">
+                        Запас хода
+                     </div>
+                     <div data-s class="in-item__title title">
+                        750км
+                     </div>
+                  </div><!-- /in-item -->
+                  <div class="indecators__item in-item">
+                     <div class="in-item__text text">
+                        Цена
+                     </div>
+                     <div data-price class="in-item__title title"> $89, 990
+                     </div>
+                  </div><!-- /in-item -->
+               </div>
+            </div>
+         </section>
+         <section class="control">
+            <div class="container">
+               <div class="control__container">
+                  <div class="control__item item">
+                     <div class="item__box">
+                        <div class="item__text text">
+                           Скорость автомобиля
+                        </div>
+                        <div data-speed class="item__title title">
+                           60 км/ч
+                        </div>
+                     </div>
+                     <div class="item__control">
+                        <span data-clickOne class="material-icons">
+                           keyboard_arrow_up
+                        </span>
+                        <span data-closeOne class="material-icons">
+                           expand_more
+                        </span>
+                     </div>
+                  </div><!-- /item -->
+                  <div class="control__item item">
+                     <div class="item__box">
+                        <div class="item__text text">
+                           Температура за окнами
+                        </div>
+                        <div data-windowTem class="item__title title">
+                           20°
+                        </div>
+                     </div>
+                     <div class="item__control">
+                        <span data-clickTwo class="material-icons">
+                           keyboard_arrow_up
+                        </span>
+                        <span data-closeTwo class="material-icons">
+                           expand_more
+                        </span>
+                     </div>
+                  </div><!-- /item -->
+                  <div class="control__item item">
+                     <div class="item__box">
+                        <div class="item__text text">
+                           Диски
+                        </div>
+                        <div data-diskText="6" class="item__title title">
+                           19
+                        </div>
+                     </div>
+                     <div class="item__control">
+                        <span data-diskUp class="material-icons">
+                           keyboard_arrow_up
+                        </span>
+                        <span data-diskDown class="material-icons">
+                           expand_more
+                        </span>
+                     </div>
+                  </div><!-- /item -->
+                  <div class="control__item item__in">
+                     <div data-con class="item__text wd text">Кондиционер</div>
+                     <input data-conActive type="checkbox" class="item__fl-input">
+                  </div>
+                  <div class="control__item item__in">
+                     <div class="item__text text">Версия Long Range</div>
+                     <input data-long type="checkbox" class="item__fl-input">
+                  </div>
+                  <div class="control__item item__in">
+                     <div class="item__text text">Вид автомобиля</div>
+                     <input type="checkbox" checked class="item__fl-input">
+                  </div>
+               </div>
+            </div>
+         </section>
+      </main>
+      <div class="madol">
+         <section class="img">
+            <div class="container">
+               <div class="img__container-img"></div>
+            </div>
+         </section><!-- /img -->
+         <section class="info">
+            <div class="container">
+               <div class="info__container">
+                  <div class="info__left-block lf-block">
+                     <div class="lf-block__text text">Запас хода</div>
+                     <div class="lf-block__title title">750км</div>
+                  </div>
+                  <div class="info__right-block rg-block">
+                     <div class="rg-block__text text">Цена</div>
+                     <div class="rg-block__title title">$89,990</div>
+                  </div>
+               </div>
+            </div>
+         </section><!-- /info -->
+         <section class="color-filter">
+            <div class="container">
+               <div class="color-filter__container">
+                  <div class="color-filter__left-block filter-lf-block">
+                     <div class="filter-lf-block__text text">Цвет салона</div>
+                     <div class="filter-lf-block__input-box">
+                        <div data-index="0" class="filter-lf-block__label color-label active-label" for="fl-color1">
+                        </div>
+                        <div data-index="1000" class="filter-lf-block__label color-label2" for="fl-color2"></div>
+                        <div data-index="2000" class="filter-lf-block__label color-label3" for="fl-color3"></div>
+                     </div>
+                  </div>
+                  <div class="color-filter__right-block filter-rg-block">
+                     <div class="filter-rg-block__text text">Вид автомобиля</div>
+                     <input type="checkbox" class="filter-rg-block__input">
+                  </div>
+               </div>
+            </div>
+         </section>
+      </div>
+   </div>
+
+   <script src="js/script.js"></script>
+</body>
+
+</html>

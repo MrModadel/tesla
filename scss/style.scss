@@ -1,0 +1,238 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: "Roboto";
+}
+.container {
+   max-width: 1240px;
+   margin: 0 auto;
+}
+.wrapper{
+   min-height: 100%;
+   overflow: hidden;
+}
+.indecators {
+   &__container {
+      margin-top: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 80px;
+   }
+
+   &__item {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+   }
+}
+.text {
+   font-weight: 500;
+   font-size: 20px;
+   line-height: 24px;
+   color: #707070;
+}
+.title {
+   font-weight: 700;
+   font-size: 64px;
+   line-height: 79px;
+   color: #000000;
+}
+.header-img {
+   position: relative;
+}
+.header-img__click {
+   position: absolute;
+   top: 242px;
+   left: 481px;
+   width: 175px;
+   height: 168px;
+   background-color: rgba(205, 49, 49, 0);
+}
+.control {
+   &__container {
+      margin-top: 55px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 54px;
+   }
+
+   &__item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+   }
+}
+.item {
+   &__box {
+   }
+
+   &__text {
+      font-size: 14px;
+   }
+
+   &__title {
+      font-size: 48px;
+   }
+
+   &__control {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      span {
+         cursor: pointer;
+         font-size: 36px;
+      }
+   }
+}
+.wd {
+   width: 60px;
+}
+.item__in {
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   align-items: start;
+   gap: 10px;
+}
+.header-img__img {
+   width: 100%;
+   background-image: url(../img/19.jpg);
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: contain;
+   height: 700px;
+   position: relative;
+   transition: 0.5s ease;
+}
+input[type="checkbox"] {
+   position: relative;
+   width: 28px;
+   height: 14px;
+   -webkit-appearance: none;
+   border-radius: 7px;
+   outline: none;
+   background-color: #c6c6c6;
+   transition: 0.5s;
+   box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.2);
+}
+input:checked[type="checkbox"] {
+   transition: 0.5s;
+   background-color: #40e551;
+}
+input[type="checkbox"]::before {
+   content: "";
+   position: absolute;
+   width: 14px;
+   height: 14px;
+   border-radius: 50%;
+   top: 0;
+   left: 0;
+   background-color: #fff;
+   transition: 0.5s;
+   transform: scale(1.1);
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+input:checked[type="checkbox"]::before {
+   left: 14px;
+}
+.img {
+   &__container-img {
+      width: 100%;
+      background-image: url(../img/pick-one.svg);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 697px;
+      transition: .2s;
+   }
+}
+
+.info {
+   &__container {
+      margin-top: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 100px;
+   }
+}
+.material-icons{
+   -webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.color-filter {
+   &__container {
+      margin-top: 55px;
+      display: flex;
+      justify-content: center;
+      align-items: start;
+      gap: 70px;
+   }
+
+   &__left-block {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      gap: 8px;
+   }
+
+   &__right-block {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      gap: 8px;
+   }
+}
+.filter-lf-block {
+   &__text {
+      font-size: 14px;
+      line-height: 17px;
+   }
+
+   &__input-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 18px;
+   }
+
+   &__label {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      transition: .3s;
+      margin: 0  0 10px  0 ;
+   }
+}
+.color-label{
+   background-color: #000000;
+}
+.color-label2{
+   background-color: gainsboro;
+}
+.color-label3{
+   background-color: blanchedalmond;
+}
+.active-label {
+   box-shadow:  0 0 0 4px rgb(82, 82, 198);
+}
+.filter-rg-block {
+   &__text {
+      font-size: 14px;
+      line-height: 17px;
+   }
+}
+.madol{
+   display: none;
+   transition: .5s ease;
+   scale: 15;
+}
