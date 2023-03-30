@@ -8,7 +8,7 @@
    max-width: 1240px;
    margin: 0 auto;
 }
-.wrapper{
+.wrapper {
    min-height: 100%;
    overflow: hidden;
 }
@@ -44,10 +44,10 @@
 }
 .header-img__click {
    position: absolute;
-   top: 242px;
-   left: 481px;
+   top: 186px;
+   left: 479px;
    width: 175px;
-   height: 168px;
+   height: 127px;
    background-color: rgba(205, 49, 49, 0);
 }
 .control {
@@ -67,9 +67,6 @@
    }
 }
 .item {
-   &__box {
-   }
-
    &__text {
       font-size: 14px;
    }
@@ -101,14 +98,49 @@
 }
 .header-img__img {
    width: 100%;
-   background-image: url(../img/19.jpg);
+   background-image: url(https://main--teal-kashata-a378a7.netlify.app/static/media/tesla.472d2fe2.jpg);
    background-position: center;
    background-repeat: no-repeat;
    background-size: contain;
-   height: 700px;
+   height: 500px;
    position: relative;
    transition: 0.5s ease;
 }
+.header-img__whyle-wrapper {
+   height: 247px;
+   width: 555px;
+   position: relative;
+   margin: 0 auto;
+}
+.header-img__whyle-19 {
+   height: 100px;
+   width: 100px;
+   bottom: -99px;
+   left: -26px;
+   position: absolute;
+   background-repeat: no-repeat;
+   background-position: 0 0;
+   background-size: cover;
+   background-image: url(https://main--teal-kashata-a378a7.netlify.app/static/media/wheel-19.000182ec.png);
+   animation: rotateWhyle 0.25s steps(6) infinite;
+}
+.locate-whyle{
+   left: auto !important;
+   right: -2px !important;
+}
+.header-img__whyle-21 {
+   height: 100px;
+   width: 100px;
+   bottom: -99px;
+   left: -26px;
+   position: absolute;
+   background-repeat: no-repeat;
+   background-position: 0 0;
+   background-size: cover;
+   background-image: url(https://main--teal-kashata-a378a7.netlify.app/static/media/wheel-21.a3203d2a.png);
+   animation: rotateWhyle 0.25s steps(6) infinite;
+}
+
 input[type="checkbox"] {
    position: relative;
    width: 28px;
@@ -143,12 +175,12 @@ input:checked[type="checkbox"]::before {
 .img {
    &__container-img {
       width: 100%;
-      background-image: url(../img/pick-one.svg);
+      background-image: url(../img/pick-one.jpg);
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
       height: 697px;
-      transition: .2s;
+      transition: 0.2s;
    }
 }
 
@@ -161,13 +193,13 @@ input:checked[type="checkbox"]::before {
       gap: 100px;
    }
 }
-.material-icons{
+.material-icons {
    -webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-khtml-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
+   -webkit-user-select: none;
+   -khtml-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
 }
 .color-filter {
    &__container {
@@ -209,21 +241,21 @@ input:checked[type="checkbox"]::before {
       width: 35px;
       height: 35px;
       border-radius: 50%;
-      transition: .3s;
-      margin: 0  0 10px  0 ;
+      transition: 0.3s;
+      margin: 0 0 10px 0;
    }
 }
-.color-label{
+.color-label {
    background-color: #000000;
 }
-.color-label2{
+.color-label2 {
    background-color: gainsboro;
 }
-.color-label3{
+.color-label3 {
    background-color: blanchedalmond;
 }
 .active-label {
-   box-shadow:  0 0 0 4px rgb(82, 82, 198);
+   box-shadow: 0 0 0 4px rgb(82, 82, 198);
 }
 .filter-rg-block {
    &__text {
@@ -231,8 +263,17 @@ input:checked[type="checkbox"]::before {
       line-height: 17px;
    }
 }
-.madol{
+.madol {
    display: none;
-   transition: .5s ease;
+   transition: 0.5s ease;
    scale: 15;
+}
+
+@keyframes rotateWhyle {
+   10% {
+      rotate: 0deg;
+   }
+   100% {
+      rotate: 1turn;
+   }
 }

@@ -51,7 +51,7 @@ oneInput.forEach(item => {
       if (item.checked) {
          numderTr -= 40;
          traty.innerHTML = `${numderTr}км`;
-      }else {
+      } else {
          numderTr += 40;
          traty.innerHTML = `${numderTr}км`;
       }
@@ -61,13 +61,14 @@ oneInput.forEach(item => {
 let twoInput = document.querySelectorAll('[data-long]');
 let price = document.querySelector('[data-price]');
 let priceNum = 89990;
+let img = document.querySelector('.header-img__img');
 twoInput.forEach(item => {
    item.onclick = () => {
       if (item.checked) {
-         priceNum+=5000;
+         priceNum += 5000;
          price.innerHTML = `$${addCommas(priceNum)}`
       } else {
-         priceNum-=5000;
+         priceNum -= 5000;
          price.innerHTML = `$${addCommas(priceNum)}`
       }
    }
@@ -81,32 +82,33 @@ imgClick.onclick = () => {
    img.style.scale = 15;
    img.style.marginTop = '600px'
    main.style.display = 'none';
-   setTimeout(i=>{
+   setTimeout(i => {
       img.style.display = 'none';
       m.style.display = 'block';
-      setTimeout(i=>{
+      setTimeout(i => {
          m.style.scale = 1;
-      },900)
-   },900)
+         img.style.marginTop = '0px'
+      }, 900)
+   }, 900)
 }
 function addCommas(nStr) {
    // console.log(nStr);
 
    nStr += '';
    // console.log(nStr);
-   
+
    var x = nStr.split('.');
    // console.log(x);
-   
+
    var x1 = x[0];
    // console.log(x1);
-   
+
    var x2 = x.length > 1 ? '.' + x[1] : '';
    // console.log(x2);
 
    var rgx = /(\d+)(\d{3})/;
    // console.log(rgx);
-   
+
    while (rgx.test(x1)) {
       x1 = x1.replace(rgx, '$1' + ',' + '$2');
    }
@@ -114,39 +116,37 @@ function addCommas(nStr) {
 }
 
 let diskMap = {
-   1:'10.jpg',
-   2:'13.webp',
-   3:'14.png',
-   4:'15.jpg',
-   5:'17.webp',
-   6:'19.jpg',
-   7:'21.webp',
-   8:'24.webp'
+   1: '19',
+   2: '21',
 }
 let diskText = document.querySelector('[data-diskText]');
 let diskUp = document.querySelectorAll('[data-diskUp]');
 let diskDown = document.querySelectorAll('[data-diskDown]');
-let img = document.querySelector('.header-img__img');
-let diskNum = 6;
+let imgOne = document.querySelectorAll('.header-img__whyle-wrapper div');
+let diskNum = 1;
 diskUp.forEach(item => {
    item.onclick = () => {
-      if (diskNum < 8) {
-         diskNum += 1;
-         let rlDisk =  diskMap[diskNum];
-         diskText.innerHTML = `${rlDisk.slice(0,2)}`;
-         img.style.backgroundImage = `url(./img/${rlDisk})`;
+      if (diskNum < 2) {
+         diskNum++
+         let rlDisk = diskMap[diskNum];
+         diskText.innerHTML = `${rlDisk}`;
+         imgOne.forEach(item => {
+            item.classList.remove('header-img__whyle-19');
+            item.classList.add('header-img__whyle-21');
+         })
       }
    }
 })
 diskDown.forEach(item => {
    item.onclick = () => {
       if (diskNum > 1) {
-         diskNum -= 1;
-         let rlDisk =  diskMap[diskNum];
-         diskText.innerHTML = `${rlDisk.slice(0,2)}`;
-         img.style.backgroundImage = `url(./img/${rlDisk})`;
-         console.log();
-         
+         diskNum--
+         let rlDisk = diskMap[diskNum];
+         diskText.innerHTML = `${rlDisk}`;
+         imgOne.forEach(item => {
+            item.classList.remove('header-img__whyle-21');
+            item.classList.add('header-img__whyle-19');
+         })
       }
    }
 })
@@ -155,9 +155,9 @@ let oneImg = document.querySelector('.img__container-img');
 let textPrice = document.querySelector('.rg-block__title');
 let onePrice = 89990;
 let mapImg = {
-   '0': 'url(./img/pick-one.svg)',
-   '1000': 'url(./img/pick-two.svg)',
-   '2000': 'url(./img/pick-tre.svg)'
+   '0': 'url(./img/pick-one.jpg)',
+   '1000': 'url(./img/pick-two.jpg)',
+   '2000': 'url(./img/pick-tre.jpg)'
 }
 labelColor.forEach(item => {
    item.onclick = () => {
@@ -168,3 +168,19 @@ labelColor.forEach(item => {
       textPrice.innerHTML = `$${addCommas(onePrice + key)}`
    }
 })
+let inputOne = document.querySelector('#inp-one');
+inputOne.onclick = () => {
+   m.style.scale = 15;
+   m.style.marginTop = '600px'
+   img.style.marginTop = '600px'
+   main.style.display = 'block';
+   setTimeout(i => {
+      m.style.display = 'none';
+      img.style.display = 'block';
+      setTimeout(i => {
+         img.style.scale = 1;
+         img.style.marginTop = '600px'
+         m.style.marginTop = '0px'
+      }, 900)
+   }, 900)
+}
